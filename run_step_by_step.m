@@ -1,16 +1,11 @@
 
-% for the code sections below you can use the the Run Section tool in 
+% For the code sections below you can use the the Run Section tool in 
 % Matlab to run one-by-one sequentially 
 
-%% Preprocessing step1
-% add preprocessing directory to path
+
+%% Preprocessing
+
 addpath preprocessing
-
-% Preprocessing step 1: Unpack data from the data file (dataPerSession.mat)
-% file and organise in a structure
-unpackData_script
-
-%% Preprocessing step2
 
 % Preprocessing step 2: calculate features and extract effect values
 calcFeats_script
@@ -20,7 +15,7 @@ rmpath preprocessing
 
 
 %% Top level analysis
-% run Preprocessing steps 1 and 2 above first
+% run Preprocessing first
 
 % Fig 2
 
@@ -38,7 +33,7 @@ buildLMEuni; clear
 
 
 %% Fig 3, delta
-% run Preprocessing steps 1 and 2 above first
+% run Preprocessing first
 
 disp('-- Fig 3 results, delta band')
 setSettings_delta_LTV
@@ -47,7 +42,7 @@ setSettings_delta_LTT
 buildLMEuni; clear
 
 %% Fig 3, theta
-% run Preprocessing steps 1 and 2 above first
+% run Preprocessing first
 
 disp('-- Fig 3 results, theta band')
 setSettings_theta_LTV
@@ -56,7 +51,7 @@ setSettings_theta_LTT
 buildLMEuni
 
 %% Fig 4, delta, step-wise forward analysis
-% run Preprocessing steps 1 and 2 above first
+% run Preprocessing first
 clc
 addpath top_level_analysis/stepwiseAnalysis
 setSettings_delta
@@ -67,7 +62,7 @@ clear
 
 
 %% Fig 4, delta, step-wise backward analysis
-% run Preprocessing steps 1 and 2 above first
+% run Preprocessing first
 clc
 addpath top_level_analysis/stepwiseAnalysis
 setSettings_delta
@@ -77,7 +72,7 @@ stepCompareBackward
 clear
 
 %% Fig 4, theta, step-wise forward analysis
-% run Preprocessing steps 1 and 2 above first
+% run Preprocessing first
 clc
 addpath top_level_analysis/stepwiseAnalysis
 setSettings_theta
@@ -88,7 +83,7 @@ clear
 
 
 %% Fig 4, theta, step-wise backward analysis
-% run Preprocessing steps 1 and 2 above first
+% run Preprocessing first
 clc
 addpath top_level_analysis/stepwiseAnalysis
 setSettings_theta
