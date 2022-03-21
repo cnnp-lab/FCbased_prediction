@@ -8,7 +8,8 @@
 load('SC.mat', 'WMcell','SC', 'SCxWM')
 
 %load the pre-preprocessing results which include the FC preprocessing
-load preproc_output1.mat
+load dataPerSubject.mat
+load dataPerSession_sorted.mat eff8Map subjV
 
 % display current status
 disp('-- Calculation of features started...')
@@ -30,7 +31,7 @@ features = addSCfeatures(features,SC,chosenSCfeatures);
 
 clear distanceMap eff8Map validityMap infoPerSes subjV i tWM WMchID sI S
 clear exclWM chosenSCfeatures
-save preproc_output2.mat
+save preproc_output.mat
 
 % display current status
 disp('-- Calculation of features done')
