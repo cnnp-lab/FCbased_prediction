@@ -7,7 +7,7 @@
 
 addpath preprocessing
 
-% Preprocessing step 2: calculate features and extract effect values
+% Preprocessing: calculate features and extract effect values
 calcFeats_script
 
 % remove preprocessing directory from path
