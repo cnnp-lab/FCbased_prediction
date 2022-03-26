@@ -4,6 +4,7 @@
 uniqSess = unique(stack.session);
 nS = length(uniqSess);
 
+%       FCA     FCC    FCM   FCsA   FCsC   FCsM    FCL   SCslc  SCgfa
 featL ={'FC2', 'FC3', 'FC4', 'FC5', 'FC6', 'FC7', 'FC8', 'SC1', 'SC2'};
 
 SE= -ones(height(stack), 1+length(featL));
