@@ -6,6 +6,8 @@
 %% Preprocessing
 
 addpath preprocessing
+addpath top_level_analysis
+addpath top_level_analysis/settingsScripts
 
 % Preprocessing: calculate features and extract effect values
 calcFeats_script
@@ -18,10 +20,6 @@ rmpath preprocessing
 % run Preprocessing first
 
 % Fig 2
-
-% add preprocessing directory to path
-addpath top_level_analysis
-addpath top_level_analysis/settingsScripts
 
 disp('-- Fig 2 results, delta band')
 setSettings_delta
@@ -45,13 +43,19 @@ buildLMEuni; clear
 % run Preprocessing first
 
 disp('-- Fig 3 results, theta band')
-setSettings_theta_LTV
+setSettings_theta_LTV  % preceding sessions considered for FCL
 buildLMEuni
-setSettings_theta_LTT
+setSettings_theta_LTT  % preceding days considered for FCL
 buildLMEuni
 
 %% Fig 4, delta, step-wise forward analysis
 % run Preprocessing first
+
+% the labels used in the printed equations (describing the models)
+% correspond to the labels used in the figures as follows:
+% distance FC2  FC3  FC4  FC5  FC6  FC7  FC8  SC1   SC2
+%   D      FCA  FCC  FCM  FCsA FCsC FCsM FCL  SCslc SCgfa
+
 clc
 addpath top_level_analysis/stepwiseAnalysis
 setSettings_delta
@@ -63,6 +67,12 @@ clear
 
 %% Fig 4, delta, step-wise backward analysis
 % run Preprocessing first
+
+% the labels used in the printed equations (describing the models)
+% correspond to the labels used in the figures as follows:
+% distance FC2  FC3  FC4  FC5  FC6  FC7  FC8  SC1   SC2
+%   D      FCA  FCC  FCM  FCsA FCsC FCsM FCL  SCslc SCgfa
+
 clc
 addpath top_level_analysis/stepwiseAnalysis
 setSettings_delta
@@ -73,6 +83,12 @@ clear
 
 %% Fig 4, theta, step-wise forward analysis
 % run Preprocessing first
+
+% the labels used in the printed equations (describing the models)
+% correspond to the labels used in the figures as follows:
+% distance FC2  FC3  FC4  FC5  FC6  FC7  FC8  SC1   SC2
+%   D      FCA  FCC  FCM  FCsA FCsC FCsM FCL  SCslc SCgfa
+
 clc
 addpath top_level_analysis/stepwiseAnalysis
 setSettings_theta
@@ -84,6 +100,12 @@ clear
 
 %% Fig 4, theta, step-wise backward analysis
 % run Preprocessing first
+
+% the labels used in the printed equations (describing the models)
+% correspond to the labels used in the figures as follows:
+% distance FC2  FC3  FC4  FC5  FC6  FC7  FC8  SC1   SC2
+%   D      FCA  FCC  FCM  FCsA FCsC FCsM FCL  SCslc SCgfa
+
 clc
 addpath top_level_analysis/stepwiseAnalysis
 setSettings_theta
