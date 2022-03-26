@@ -4,6 +4,7 @@ bandL = bands{bandI};
 
 load altLabels
 featlabels ={'distance','FC2', 'FC3', 'FC4', 'FC5', 'FC6', 'FC7', 'FC8', 'SC1', 'SC2'};
+%               D        FCA    FCC    FCM    FCsA   FCsC   FCsM   FCL    SCslc  SCgfa
 
 if enableLTVs==1
     featlabels ={'H99','H5', 'H4', 'H3', 'H2', 'H1', 'H0'};

@@ -1,12 +1,7 @@
 
-% prepare the labels of available features
-% considering that the first 5 labels in vLabels are the bands and that the
-% last 2 labels are 'session' and 'subject'
-fLabels = vLabels;
-fLabels(end-1 :end)=[];
-fLabels(1:5)=[];
-
-
+% labels to be used in the equations
+fLabels ={'distance','FC2', 'FC3', 'FC4', 'FC5', 'FC6', 'FC7', 'FC8', 'SC1', 'SC2'};
+%            D        FCA    FCC    FCM    FCsA   FCsC   FCsM   FCL    SCslc  SCgfa
 
 maxLRstat = 1000;
 
